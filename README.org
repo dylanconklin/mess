@@ -1,0 +1,62 @@
+* MESSenger
+
+** About
+
+MESSenger is a text-based TCP chat server, which can be connected to through telnet. It is a fully featured chatroom service written in Go.
+
+** Installation
+
+To create the client and server application, you can simply run
+
+#+begin_src shell
+make
+#+end_src
+
+** How to Use
+
+*** Starting the server
+
+You can start the server by running
+
+#+begin_src shell
+./mess-server
+#+end_src
+
+*** Starting the client
+
+You can start the client by running
+
+#+begin_src shell
+./mess
+#+end_src
+
+Or you can connect to a server on your local machine by running
+
+#+begin_src shell
+./mess-local
+#+end_src
+
+*** Creating a user
+
+When logging in, you can enter any username and password you want, and if the user doesn't exist, the server will prompt you to create a new user with your selected username
+
+#+begin_src shell
+Username: new_user
+Password: my_password
+Create new user (y/N): y
+#+end_src
+
+*** Other Commands
+
+|---------------------------------------+----------------------------------------|
+| Description                           | Command                                |
+|---------------------------------------+----------------------------------------|
+| /delete ROOM_ID                       | Delete chatroom with ID                |
+| /exit                                 | Disconnect from server                 |
+| /help                                 | Print list of valid commands           |
+| /join ROOM_ID                         | Join room with ID                      |
+| /make ROOM_NAME USER1 USER2 ... USERX | Create new chatroom with users         |
+| /password PASSWORD                    | Change password for logged in user     |
+| /quit                                 | Leave chat room                        |
+| /rooms                                | List available chatrooms and their IDs |
+|---------------------------------------+----------------------------------------|
